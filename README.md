@@ -80,3 +80,20 @@ select JSON
  Visit takeout after some time
  
  Download
+ 
+ 
+ assign json as entire youtube json 
+ 
+ then
+ ```
+ 
+let blacklist = ["hit","cardio","morning","property","hindi","deepak","melvin","song","choreo","danc",
+"monkey","jcb","workout","dumb","icc","ipl","trailer","animal","fnp","car","phone","sams","onep","recipe",
+"bjp","news","rhym","song","baby","melon","stretch","kettle"];
+
+console.log(json.filter(x=>x.time.indexOf("2023")>-1).filter(x=>!blacklist.some(s => x.title.toLowerCase().includes(s))).length);
+
+
+json.filter(x=>x.time.indexOf("2023")>-1).filter(x=>!blacklist.some(s => x.title.toLowerCase().includes(s))).forEach(x=>console.log(`${x.title};youtube;NA;${x.time};${x.titleUrl}`));
+
+```
